@@ -405,7 +405,9 @@
     click: function (e) {
       e.preventDefault();
       this.select();
-      this.$element.focus();
+      if (!this.options.showHintOnFocus) {
+        this.$element.focus();
+      }
     },
 
     mouseenter: function (e) {
